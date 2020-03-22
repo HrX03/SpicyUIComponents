@@ -13,10 +13,10 @@ class SpicyThemes {
         primaryColor: dynamicAccentColor,
         primaryColorLight: Colors.black,
         secondaryHeaderColor: Colors.black,
-        scaffoldBackgroundColor: Color(0xFF111111),
+        scaffoldBackgroundColor: Color(0xFF121212),
         textSelectionHandleColor: dynamicAccentColor,
         snackBarTheme: SnackBarThemeData(
-          backgroundColor: Color(0xFF111111),
+          backgroundColor: Color(0xFF121212),
           elevation: 1,
           actionTextColor: dynamicAccentColor,
           contentTextStyle: TextStyle(
@@ -29,8 +29,8 @@ class SpicyThemes {
           hoverColor: dynamicAccentColor,
         ),
         buttonColor: dynamicAccentColor,
-        iconTheme: IconThemeData(color: Color(0x8AFFFFFF)),
-        disabledColor: Color(0x4AFFFFFF));
+        iconTheme: IconThemeData(color: Colors.white.withOpacity(0.7)),
+        disabledColor: Colors.white.withOpacity(0.4));
   }
 
   static ThemeData dark(Color dynamicAccentColor) {
@@ -39,7 +39,7 @@ class SpicyThemes {
         cursorColor: dynamicAccentColor,
         textSelectionHandleColor: dynamicAccentColor,
         snackBarTheme: SnackBarThemeData(
-          backgroundColor: Color(0xFF212121),
+          backgroundColor: Colors.grey[900],
           elevation: 1,
           actionTextColor: dynamicAccentColor,
           contentTextStyle: TextStyle(
@@ -55,12 +55,12 @@ class SpicyThemes {
         primaryColor: dynamicAccentColor,
         backgroundColor: dynamicAccentColor,
         cardColor: Color(0xFF151618),
-        scaffoldBackgroundColor: Color(0xFF212121),
-        dialogBackgroundColor: Color(0xFF212121),
-        bottomAppBarColor: Color(0xFF212121),
-        canvasColor: Color(0xFF212121),
-        iconTheme: IconThemeData(color: Color(0x8AFFFFFF)),
-        disabledColor: Color(0x4AFFFFFF));
+        scaffoldBackgroundColor: Colors.grey[900],
+        dialogBackgroundColor: Colors.grey[900],
+        bottomAppBarColor: Colors.grey[900],
+        canvasColor: Colors.grey[900],
+        iconTheme: IconThemeData(color: Colors.white.withOpacity(0.7)),
+        disabledColor: Colors.white.withOpacity(0.4));
   }
 
   static ThemeData light(Color dynamicAccentColor) {
@@ -88,7 +88,7 @@ class SpicyThemes {
         buttonColor: dynamicAccentColor,
         primaryColor: dynamicAccentColor,
         backgroundColor: dynamicAccentColor,
-        iconTheme: IconThemeData(color: Color(0x8A000000)),
-        disabledColor: Color(0x4A000000));
+        iconTheme: IconThemeData(color: Colors.black.withOpacity(0.7)),
+        disabledColor: Colors.black.withOpacity(0.7));
   }
 }
