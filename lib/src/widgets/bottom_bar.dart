@@ -7,6 +7,7 @@ class SpicyBottomBar extends StatelessWidget {
   final EdgeInsets padding;
   final double elementPadding;
   final double height;
+  final bool notched;
 
   SpicyBottomBar({
     @required this.leftItems,
@@ -15,6 +16,7 @@ class SpicyBottomBar extends StatelessWidget {
     this.padding = const EdgeInsets.symmetric(horizontal: 16),
     this.elementPadding = 8.0,
     this.height = 56.0,
+    this.notched = false,
   })  : assert(leftItems.length <= 3),
         assert((rightItems ?? []).length <= 3);
 
@@ -32,8 +34,12 @@ class SpicyBottomBar extends StatelessWidget {
             )
           ]),
       height: height,
-      child: Material(
+      child: BottomAppBar(
         color: bgColor ?? Theme.of(context).cardColor,
+        shape: notched
+            ? CircularNotchedRectangle()
+            : null,
+        elevation: 0,
         child: Padding(
           padding: padding,
           child: Row(
