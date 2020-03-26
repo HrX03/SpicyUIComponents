@@ -8,6 +8,7 @@ class SpicyBottomBar extends StatelessWidget {
   final double elementPadding;
   final double height;
   final bool notched;
+  final int elevation;
 
   SpicyBottomBar({
     @required this.leftItems,
@@ -17,29 +18,20 @@ class SpicyBottomBar extends StatelessWidget {
     this.elementPadding = 8.0,
     this.height = 56.0,
     this.notched = false,
+    this.elevation,
   })  : assert(leftItems.length <= 3),
         assert((rightItems ?? []).length <= 3);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          color: Theme.of(context).scaffoldBackgroundColor,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 2,
-              offset: Offset(0, -0.1),
-              spreadRadius: 2,
-            )
-          ]),
-      height: height,
-      child: BottomAppBar(
-        color: bgColor ?? Theme.of(context).cardColor,
-        shape: notched
-            ? CircularNotchedRectangle()
-            : null,
-        elevation: 0,
+    return BottomAppBar(
+      color: bgColor ?? Theme.of(context).cardColor,
+      shape: notched
+          ? CircularNotchedRectangle()
+          : null,
+      elevation: elevation ?? 2,
+      child: SizedBox(
+        height: height,
         child: Padding(
           padding: padding,
           child: Row(
