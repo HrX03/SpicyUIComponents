@@ -8,7 +8,7 @@ class SpicyBottomBar extends StatelessWidget {
   final double elementPadding;
   final double height;
   final bool notched;
-  final int elevation;
+  final double elevation;
 
   SpicyBottomBar({
     @required this.leftItems,
@@ -29,7 +29,7 @@ class SpicyBottomBar extends StatelessWidget {
       shape: notched
           ? CircularNotchedRectangle()
           : null,
-      elevation: elevation ?? 2,
+      elevation: elevation ?? 6,
       child: SizedBox(
         height: height,
         child: Padding(
