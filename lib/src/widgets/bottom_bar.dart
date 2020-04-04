@@ -26,9 +26,7 @@ class SpicyBottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomAppBar(
       color: bgColor ?? Theme.of(context).cardColor,
-      shape: notched
-          ? CircularNotchedRectangle()
-          : null,
+      shape: notched ? CircularNotchedRectangle() : null,
       elevation: elevation ?? 6,
       child: SizedBox(
         height: height,
