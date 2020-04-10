@@ -21,8 +21,7 @@ class SpicyBottomBar extends StatelessWidget {
     this.notched = false,
     this.elevation,
     this.bottomBarPadding = const EdgeInsets.all(0),
-  })  : assert(leftItems.length <= 3),
-        assert((rightItems ?? []).length <= 3);
+  })  : assert((leftItems.length + (rightItems?.length ?? 0)) <= 6);
 
   @override
   Widget build(BuildContext context) {
